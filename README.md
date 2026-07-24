@@ -29,8 +29,6 @@ TransitOps solves these problems by providing a centralized digital platform tha
 ## Technologies Used
 
 * **Backend:** Node.js, Express.js
-* **Database:** MongoDB, Mongoose
-* **Authentication & Security:** JWT, bcryptjs
 * **Development Tools:** Git, GitHub, VS Code
 
 ## Screenshots
