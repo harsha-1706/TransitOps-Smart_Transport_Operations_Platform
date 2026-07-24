@@ -12,8 +12,7 @@ TransitOps solves these problems by providing a centralized digital platform tha
 
 ## Key Features
 
-- 🔐 Secure authentication with JWT
-- 👥 Role-Based Access Control (RBAC)
+
 - 🚛 Vehicle registration and management
 - 👨‍✈️ Driver profile and license management
 - 🛣️ Trip creation, dispatch, completion, and cancellation
@@ -24,7 +23,6 @@ TransitOps solves these problems by providing a centralized digital platform tha
 - 📈 Fleet utilization and fuel efficiency tracking
 - 💵 Vehicle ROI and operational cost analysis
 - 📁 CSV report export
-- 🔎 Search, filtering, and sorting
 - 📱 Responsive web interface
 
   
