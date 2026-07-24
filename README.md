@@ -28,8 +28,7 @@ TransitOps solves these problems by providing a centralized digital platform tha
   
 ## Technologies Used
 
-* **Backend:** Node.js, Express.js
-* **Development Tools:** Git, GitHub, VS Code
+* **Development Tools:** Git, GitHub, VS Code, HTML.
 
 ## Screenshots
 
