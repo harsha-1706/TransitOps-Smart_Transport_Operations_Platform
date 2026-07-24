@@ -32,3 +32,14 @@ TransitOps solves these problems by providing a centralized digital platform tha
 * **Database:** MongoDB, Mongoose
 * **Authentication & Security:** JWT, bcryptjs
 * **Development Tools:** Git, GitHub, VS Code
+
+## Screenshots
+
+![Login page](Assets/Screenshots/Login/Login_page.png) 
+
+![Dashboard page](Assets/Screenshots/Dashboard/Dashboard_page.png)
+
+![Vehicle Registry](Assets/Screenshots/Vehicle_registry/Vehicle_registry_page.png)
+
+![Drivers Profile](Assets/Screenshots/Drivers_profile/Driver_profiles_page.png)
+
