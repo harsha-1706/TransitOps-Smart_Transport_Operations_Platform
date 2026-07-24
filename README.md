@@ -10,17 +10,21 @@ Many logistics and transport companies still depend on spreadsheets, paper recor
 TransitOps solves these problems by providing a centralized digital platform that manages the complete transport lifecycle. It automatically enforces operational rules, prevents invalid vehicle and driver assignments, tracks maintenance and expenses, and provides real-time insights into fleet utilization, fuel efficiency, operational costs, and vehicle performance.
 
 
-**Key Features:**
+## Key Features
 
-* Role-Based Access Control (RBAC) and secure authentication
-* Vehicle and driver management
-* Trip creation, dispatch, completion, and cancellation
-* Automated vehicle and driver status transitions
-* Driver license and vehicle capacity validation
-* Maintenance workflow with automatic vehicle status updates
-* Fuel and expense tracking
-* Fleet utilization and operational analytics
-* Reports and CSV export
-* Responsive web interface
+- 🔐 Secure authentication with JWT
+- 👥 Role-Based Access Control (RBAC)
+- 🚛 Vehicle registration and management
+- 👨‍✈️ Driver profile and license management
+- 🛣️ Trip creation, dispatch, completion, and cancellation
+- 🔧 Vehicle maintenance management
+- ⛽ Fuel logging and tracking
+- 💰 Operational expense management
+- 📊 Fleet performance dashboard and analytics
+- 📈 Fleet utilization and fuel efficiency tracking
+- 💵 Vehicle ROI and operational cost analysis
+- 📁 CSV report export
+- 🔎 Search, filtering, and sorting
+- 📱 Responsive web interface
 
   
