@@ -17,36 +17,41 @@
 
 body{
 
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
 
     background:
-    linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    linear-gradient(135deg,#020617,#0f172a,#1e3a8a);
 
 }
 
 
+/* Main Card */
 
-.login-box{
+.login-container{
 
-    width:380px;
+    width:420px;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(20px);
 
     padding:35px;
 
-    background:rgba(255,255,255,0.15);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:20px;
+    border-radius:25px;
 
     color:white;
 
-    box-shadow:0 20px 50px black;
+    box-shadow:
+    0 25px 50px rgba(0,0,0,0.5);
 
 }
 
+
+
+/* Logo */
 
 
 .logo{
@@ -58,29 +63,109 @@ body{
 }
 
 
-
 .logo h1{
 
-    color:#00ffcc;
-    font-size:32px;
+    font-size:36px;
+
+    color:#38bdf8;
 
 }
-
 
 
 .logo p{
 
-    color:#ddd;
+    color:#cbd5e1;
+
+    margin-top:8px;
 
 }
 
+
+
+/* Inputs */
 
 
 label{
 
     display:block;
 
-    margin-top:15px;
+    margin-top:18px;
+
+    font-size:14px;
+
+    color:#e2e8f0;
+
+}
+
+
+
+.input-box{
+
+    position:relative;
+
+}
+
+
+input,select{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-top:7px;
+
+    border-radius:12px;
+
+    border:none;
+
+    outline:none;
+
+    background:#f8fafc;
+
+    font-size:15px;
+
+}
+
+
+
+.show{
+
+    position:absolute;
+
+    right:12px;
+
+    top:18px;
+
+    cursor:pointer;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+}
+
+
+
+/* Captcha */
+
+
+.captcha{
+
+    margin-top:10px;
+
+    background:#020617;
+
+    padding:15px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    font-size:24px;
+
+    letter-spacing:6px;
+
+    color:#22c55e;
 
     font-weight:bold;
 
@@ -88,44 +173,7 @@ label{
 
 
 
-input{
-
-    width:100%;
-
-    padding:12px;
-
-    margin-top:8px;
-
-    border-radius:10px;
-
-    border:none;
-
-    outline:none;
-
-}
-
-
-
-.captcha{
-
-    margin-top:15px;
-
-    padding:15px;
-
-    background:#111;
-
-    text-align:center;
-
-    font-size:25px;
-
-    letter-spacing:5px;
-
-    color:#00ffcc;
-
-    border-radius:10px;
-
-}
-
+/* Button */
 
 
 button{
@@ -140,9 +188,9 @@ button{
 
     border-radius:30px;
 
-    background:#00ffcc;
+    background:#2563eb;
 
-    color:#003333;
+    color:white;
 
     font-size:17px;
 
@@ -156,22 +204,61 @@ button{
 
 button:hover{
 
-    transform:scale(1.05);
+    background:#1d4ed8;
+
+    transform:scale(1.03);
 
 }
 
 
 
-.message{
+/* Remember */
+
+
+.remember{
 
     margin-top:15px;
 
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+
+
+/* Message */
+
+
+.message{
+
     text-align:center;
+
+    margin-top:15px;
 
     font-weight:bold;
 
 }
 
+
+
+/* Demo */
+
+.demo{
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:rgba(255,255,255,0.1);
+
+    border-radius:15px;
+
+    font-size:13px;
+
+}
 
 
 </style>
@@ -185,42 +272,85 @@ button:hover{
 
 
 
-<div class="login-box">
+<div class="login-container">
 
 
 <div class="logo">
 
 <h1>🚍 TransitOps</h1>
 
-<p>Smart Transport Operations</p>
+<p>
+Smart Transport Operations Platform
+</p>
 
 </div>
 
 
 
+<label>Email Address</label>
 
-<label>
-Username
-</label>
-
-<input id="username"
-placeholder="Enter username">
+<input id="email"
+placeholder="Enter email">
 
 
 
-<label>
-Password
-</label>
+<label>Password</label>
+
+
+<div class="input-box">
 
 <input id="password"
 type="password"
 placeholder="Enter password">
 
 
+<span class="show"
+onclick="showPassword()">
 
-<label>
-Security Verification
-</label>
+Show
+
+</span>
+
+
+</div>
+
+
+
+
+
+<label>Login Role</label>
+
+
+<select id="role">
+
+
+<option>
+Fleet Manager
+</option>
+
+
+<option>
+Dispatcher
+</option>
+
+
+<option>
+Safety Officer
+</option>
+
+
+<option>
+Financial Analyst
+</option>
+
+
+</select>
+
+
+
+
+
+<label>Security Verification</label>
 
 
 <div class="captcha" id="captcha">
@@ -229,25 +359,73 @@ Security Verification
 
 
 <input id="captchaInput"
-placeholder="Enter CAPTCHA">
+placeholder="Enter answer">
 
 
 
-<button onclick="login()">
-
-Login
-
-</button>
 
 
+<div class="remember">
 
-<div class="message" id="message">
+<input type="checkbox">
+
+<span>
+Remember me
+</span>
+
+</div>
+
+
+
+
+
+<a href="dashboard.html">
+    <button type="button">LOGIN</button>
+</a>
+
+
+
+<div class="message"
+id="message">
+
+</div>
+
+
+
+
+
+<div class="demo">
+
+<b>Demo Login:</b>
+
+<br><br>
+
+Manager:
+manager@transitops.com
+
+<br>
+
+Password:
+12345
+
+<br><br>
+
+Dispatcher:
+dispatcher@transitops.com
+
+<br>
+
+Password:
+12345
+
 
 </div>
 
 
 
 </div>
+
+
 
 
 
@@ -256,29 +434,54 @@ Login
 <script>
 
 
-let num1;
-let num2;
+let x,y;
 
 
 
 function generateCaptcha(){
 
 
-num1=Math.floor(Math.random()*9)+1;
+x=Math.floor(Math.random()*9)+1;
 
-num2=Math.floor(Math.random()*9)+1;
+y=Math.floor(Math.random()*9)+1;
 
 
 document.getElementById("captcha")
-.innerHTML =
-num1+" + "+num2+" = ?";
+.innerHTML=
+x+" + "+y+" = ?";
 
 
 }
 
 
-
 generateCaptcha();
+
+
+
+
+
+
+function showPassword(){
+
+
+let pass=document.getElementById("password");
+
+
+if(pass.type==="password"){
+
+pass.type="text";
+
+}
+
+else{
+
+pass.type="password";
+
+}
+
+
+}
+
 
 
 
@@ -287,77 +490,106 @@ generateCaptcha();
 function login(){
 
 
-let user=
-document.getElementById("username").value;
+let email=
+document.getElementById("email").value;
 
 
-let pass=
+let password=
 document.getElementById("password").value;
 
 
-
-let captchaAnswer=
+let captcha=
 document.getElementById("captchaInput").value;
 
 
 
-if(user=="" || pass==""){
+let role=
+document.getElementById("role").value;
 
-showMessage("Enter username and password","red");
+
+
+
+
+if(email==""||password==""){
+
+
+display(
+"Please enter login details ❌",
+"red"
+);
 
 return;
+
 
 }
 
 
 
-if(Number(captchaAnswer)!=(num1+num2)){
+if(Number(captcha)!=(x+y)){
 
 
-showMessage(
-"Incorrect CAPTCHA ❌",
+display(
+"Wrong CAPTCHA ❌",
 "red"
 );
 
 
 generateCaptcha();
 
-
 return;
+
 
 }
 
 
 
-// Demo login credentials
 
-if(user=="admin" && pass=="12345"){
+// Demo authentication
 
 
-showMessage(
-"Login Successful ✅",
-"#00ff99"
+if(password==="12345"){
+
+
+
+localStorage.setItem(
+"user",
+email
 );
 
 
-// redirect demo
+localStorage.setItem(
+"role",
+role
+);
+
+
+
+display(
+"Login Successful ✅",
+"#22c55e"
+);
+
+
 
 setTimeout(()=>{
 
-window.location.href="dashboard.html";
+alert(
+"Welcome "+role+
+"\nOpening Dashboard..."
+);
 
-},1500);
+
+},1000);
 
 
 
 }
-
 
 else{
 
 
-showMessage(
-"Invalid Login Details ❌",
+display(
+"Invalid Password ❌",
 "red"
 );
 
@@ -370,7 +602,9 @@ showMessage(
 
 
 
-function showMessage(text,color){
+
+
+function display(text,color){
 
 let msg=
 document.getElementById("message");
@@ -382,7 +616,6 @@ msg.style.color=color;
 
 
 }
-
 
 
 </script>
