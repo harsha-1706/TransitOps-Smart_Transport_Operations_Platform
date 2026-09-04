@@ -32,11 +32,11 @@ TransitOps solves these problems by providing a centralized digital platform tha
 
 ## Screenshots
 
-![Login page](ScreenshotsLogin_page.png) 
+![Login page](Screenshots/Login_page.png) 
 
 ![Dashboard page](Screenshots/Dashboard_page.png)
 
 ![Vehicle Registry](Screenshots/Vehicle_registry_page.png)
 
-![Drivers Profile](Screenshots/Driver_profiles_page.png)
+![Drivers Profile](Screenshots/Drivers_profile_page.png)
 
